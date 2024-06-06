@@ -1,1 +1,8 @@
-/nvim-linux64.tar.gz
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data

@@ -1,3 +1,0 @@
-return {
-    'jidn/vim-dbml'
-}
