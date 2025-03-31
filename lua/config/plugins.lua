@@ -42,6 +42,17 @@ require("lazy").setup({
   'folke/which-key.nvim',        -- <leader> options menu
   'nvim-tree/nvim-web-devicons', -- Icons
   'nvimdev/dashboard-nvim',      -- Dashboard
+  -- R.nvim and dependencies
+  {
+    "R-nvim/R.nvim",
+    lazy = false,
+  },
+  {
+    "R-nvim/cmp-r",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+    },
+  },
   -- Add more plugins here...
 })
 
