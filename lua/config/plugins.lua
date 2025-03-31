@@ -53,6 +53,12 @@ require("lazy").setup({
       "hrsh7th/nvim-cmp",
     },
   },
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+        -- add any options here
+    }
+  }
   -- Add more plugins here...
 })
 
