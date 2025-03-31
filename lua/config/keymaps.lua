@@ -14,4 +14,5 @@ vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })  -- Paste f
 vim.api.nvim_set_keymap('n', '<leader>tt', ':split | term<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>tv', ':vsplit | term<CR>', { noremap = true, silent = true })
 
+vim.keymap.set('n', '<esc><esc>', ':nohlsearch<CR>', { noremap = true, silent = true })
 
