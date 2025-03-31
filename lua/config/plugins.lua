@@ -42,6 +42,7 @@ require("lazy").setup({
   'folke/which-key.nvim',        -- <leader> options menu
   'nvim-tree/nvim-web-devicons', -- Icons
   'nvimdev/dashboard-nvim',      -- Dashboard
+  'numToStr/Comment.nvim',       -- Toggle comment
   -- R.nvim and dependencies
   {
     "R-nvim/R.nvim",
@@ -53,12 +54,5 @@ require("lazy").setup({
       "hrsh7th/nvim-cmp",
     },
   },
-  {
-    'numToStr/Comment.nvim',
-    opts = {
-        -- add any options here
-    }
-  }
-  -- Add more plugins here...
 })
 
