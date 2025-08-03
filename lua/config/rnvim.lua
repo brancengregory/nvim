@@ -3,13 +3,9 @@ local R = require('r')
 -- Configure R.nvim to use tmux
 R.setup({
   -- Use tmux for sending commands
-  external_term = {
-    app = "tmux",
-    pane = "left",
-    send_keys = true
-  }, 
+  external_term = "tmux split-window -v",
 
-  cmd = "radian",
+  R_app = "radian",
   
   -- Arguments for R
   R_args = {
@@ -19,12 +15,13 @@ R.setup({
 
   auto_start = "on startup",
   objbr_auto_start = true,
-  set_width = false,
-  obj_args = true,
   bracketed_paste = true,
-  auto_quit = false 
-})
+  auto_quit = false,
 
--- Configure cmp-r for R autocompletion
-require("cmp").setup({ sources = {{ name = "cmp_r" }}})
-require("cmp_r").setup({})
+  hook = {
+    on_filetype = function()
+      vim.keymap.set("n", "<Enter>", "<Plug>RDSendLine", { noremap = true, buffer = true, desc = "Send Line to R" })
+      vim.keymap.set("v", "<Enter>", "<Plug>RSendSelection", { noremap = true, buffer = true, desc = "Send Selection to R" })
+    end
+  }
+})

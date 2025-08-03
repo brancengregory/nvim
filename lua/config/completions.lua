@@ -18,7 +18,7 @@ cmp.setup({
     { name = 'buffer' },   -- Buffer completions
     { name = 'path' },     -- Path completions
     { name = 'cmdline' },  -- Neovim completions
-    -- { name = 'cmp_r' },    -- From R.nvim
+    { name = 'cmp_r' }    -- From R.nvim
   }
 })
 
